@@ -1,24 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap");
 
 /*===== Variables CSS =====*/
 :root {
-/*===== Colors =====*/
+  /*===== Colors =====*/
   --hue: 358;
-  --first-color:hsl(var(--hue), 80%, 49%);
-  --first-color-alt:hsl(var(--hue), 76%, 45%);
-  --white-color:hsl(0, 0%, 98%);
-  --black-color:hsl(0, 0%, 1%);
-  --text-color:hsl(var(--hue), 2%, 66%);
-  --body-color:hsl(var(--hue), 100%, 1%);
-  --container-color:hsl(var(--hue), 2%, 10%);
-  --conic-gradient:conic-gradient(150deg AT 50% 45%,
+  --first-color: hsl(var(--hue), 80%, 49%);
+  --first-color-alt: hsl(var(--hue), 76%, 45%);
+  --white-color: hsl(0, 0%, 98%);
+  --black-color: hsl(0, 0%, 1%);
+  --text-color: hsl(var(--hue), 2%, 66%);
+  --body-color: hsl(var(--hue), 100%, 1%);
+  --container-color: hsl(var(--hue), 2%, 10%);
+  --conic-gradient: conic-gradient(
+    150deg AT 50% 45%,
     hsl(var(--hue), 80%, 20%) 0deg,
     hsl(var(--hue), 80%, 48%) 140deg,
-    hsl(var(--hue), 80%, 20%) 360deg,
+    hsl(var(--hue), 80%, 20%) 360deg
+  );
 
   /*===== Font & Typography =====*/
-  --body-font: 'Montserrat Alternates', sans-serif;
-  --second-font: 'Grechen Fuemen', cursive;
+  --body-font: "Montserrat Alternates", sans-serif;
+  --second-font: "Grechen Fuemen", cursive;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -81,7 +83,10 @@ textarea {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--white-color);
   font-weight: var(--font-semibold);
 }
@@ -126,8 +131,39 @@ img {
 }
 
 /*===== Nav =====*/
+.nav {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  background-color: hsla(0, 0%, 98%, 0.1);
+  width: 88%;
+  margin-inline: auto;
+  backdrop-filter: blur(16px);
+  --webkit-backdrop-filter: blur(16px);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  z-index: var(--z-fixed);
+}
 
-/*
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__link {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.6s;
+}
+/* Active Link */
 
 /*===== Home =====*/
 /* Profile */
