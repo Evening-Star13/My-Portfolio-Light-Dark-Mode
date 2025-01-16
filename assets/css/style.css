@@ -1,77 +1,89 @@
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Montserrat+Alternates:wght@600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap');
 
-/* Variables CSS */
+/*===== Variables CSS =====*/
 :root {
-  /* Colors */
-  --hue: 165;
-  --first-color: hsl(var(--hue), 60%, 40%);
-  --title-color: hsl(var(--hue), 4%, 12%);
-  --text-color: hsl(var(--hue), 4%, 20%);
-  --body-color: hsl(var(--hue), 30%, 92%);
-  --container-color: hsl(0, 0%, 100%);
-  --border-color: hsl(var(--hue), 4%, 16%);
-  --white-color: hsl(0, 0%, 100%);
-  --shadow-color: hsla(var(--hue), 80% 10%, 0.2);
+/*===== Colors =====*/
+  --hue: 358;
+  --first-color:hsl(var(--hue), 80%, 49%);
+  --first-color-alt:hsl(var(--hue), 76%, 45%);
+  --white-color:hsl(0, 0%, 98%);
+  --black-color:hsl(0, 0%, 1%);
+  --text-color:hsl(var(--hue), 2%, 66%);
+  --body-color:hsl(var(--hue), 100%, 1%);
+  --container-color:hsl(var(--hue), 2%, 10%);
+  --conic-gradient:conic-gradient(150deg AT 50% 45%,
+    hsl(var(--hue), 80%, 20%) 0deg,
+    hsl(var(--hue), 80%, 48%) 140deg,
+    hsl(var(--hue), 80%, 20%) 360deg,
 
-  /* Font Family*/
-  --body-font: "Jost", sans-serif;
-  --second-font: "Montserrat Alternates", sans-serif;
+  /*===== Font & Typography =====*/
+  --body-font: 'Montserrat Alternates', sans-serif;
+  --second-font: 'Grechen Fuemen', cursive;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
-  /* Font sizes */
-  --big-font-size: 5.5rem;
-  --h1-font-size: 2.75rem;
-  --h2-font-size: 1.75rem;
-  --h3-font-size: 1.5rem;
-  --larger-font-size: 1.25rem;
-  --large-font-size: 1.125rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.8125rem;
-
-  /* Font weight */
+  /*===== Font weight =====*/
+  --font-regular: 400;
   --font-medium: 500;
-  --font-semi-bold: 600;
-  --font-bold: 700;
-  --font-black: 800;
+  --font-semibold: 600;
 
-  /* Transition */
-  --transition: cubic-bezier(0.3, 0, 0.3, 1);
+  /*===== z index =====*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-/* Responsive Typography */
-@media screen and (max-width: 1024px) {
+/*===== Responsive Typography =====*/
+@media screen and (min-width: 1168px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
 }
 
-/* Dark Theme */
-
-/* Base */
+/*===== Global Styles =====*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
-button,
 input,
-textarea {
-  color: var(--text-color);
+textarea,
+button {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
 
 body {
   background-color: var(--body-color);
+  color: var(--white-color);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: var(--title-color);
-  font-family: var(--second-font);
-  font-weight: var(--font-bold);
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
 }
 
 ul {
@@ -85,195 +97,45 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
-button,
-input,
-textarea {
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-/* Reusable CSS Classes */
-.social-links {
-  display: inline-flex;
-  column-gap: 1.25rem;
-}
-
-.social-link {
-  color: var(--title-color);
-  font-size: var(--h3-font-size);
-  transition: color 0.7s var(--transition);
-}
-
-.social-link:hover {
-  color: var(--first-color);
-}
-/* Layout */
+/*===== Reusable CSS Classes =====*/
 .container {
-  max-width: 1320px;
-  margin-inline: auto;
-  padding-inline: 1.5rem;
+  max-width: 1168;
+  margin-inline: 1.5rem;
 }
 
-/* Header & Nav */
-.header {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 5rem;
-  max-width: 1540px;
+.section {
+  padding-block: 2rem 3rem;
 }
 
-.nav-logo,
-.nav-link {
-  color: var(--title-color);
-  font-weight: var(--font-bold);
+.section__title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.nav-logo {
-  font-family: var(--second-font);
-  font-size: var(--h3-font-size);
+.main {
+  overflow: hidden;
 }
 
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  column-gap: 1.75rem;
-}
+/*===== Nav =====*/
 
-.nav-settings,
-.nav-toggle {
-  cursor: pointer;
-}
+/*
 
-.nav-settings {
-  font-size: 1.5rem;
-}
+/*===== Home =====*/
+/* Profile */
 
-.nav-toggle {
-  width: 28px;
-  height: 28px;
-  position: relative;
-}
+/* Info */
 
-.nav-toggle::before,
-.nav-toggle::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: var(--title-color);
-  position: absolute;
-  left: 0;
-  transition: all 0.7s var(--transition);
-}
-
-.nav-toggle::before {
-  top: 7px;
-}
-
-.nav-toggle::after {
-  bottom: 7px;
-}
-
-.nav-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  background-color: var(--container-color);
-  width: 512px;
-  height: 100%;
-  padding: 9rem 0 0 9.5rem;
-  transition: right 1s var(--transition);
-}
-
-.nav-list {
-  margin-bottom: 2.5rem;
-}
-
-.nav-item {
-  margin-bottom: 1.25rem;
-}
-
-.nav-link {
-  font-size: var(--larger-font-size);
-  transition: color 0.3s var(--transition);
-}
-
-.nav-link:hover {
-  color: var(--first-color);
-}
-
-/* Show Menu */
-.show-menu {
-  right: 0;
-}
-
-.animate-toggle::before {
-  transform: rotate(45deg);
-  top: 14px;
-}
-
-.animate-toggle::after {
-  transform: rotate(-45deg);
-  bottom: 12px;
-}
-
-/* Active Link */
-
-/* Change Background Header */
-
-/* Main */
-
-/* Home */
-
-/* Services */
-
-/* Swiper */
+/* About */
 
 /* Skills */
 
-/* Work */
-
-/* Active Work */
-
-/* Resume */
-
-/* Testimonials */
-
-/* Contact */
-
-/* Footer */
-
-/* Style Switcher */
-
-/* Show Switcher */
-
-/* Breakpoints */
-/* For large devices */
-@media screen and (max-width: 1200px) {
-}
-
-@media screen and (max-width: 1024px) {
-}
-
-/* For medium devices */
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 576px) {
-}
-
-/* For small devices */
-@media screen and (max-width: 400px) {
-}
+/*===== Button =====*/
