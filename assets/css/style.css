@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap");
 
-/*===== Variables CSS =====*/
+/*=============== Variables CSS ===============*/
 :root {
-  /*===== Colors =====*/
+  /*=============== Colors ===============*/
   --hue: 358;
   --first-color: hsl(var(--hue), 80%, 49%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
@@ -12,13 +12,13 @@
   --body-color: hsl(var(--hue), 100%, 1%);
   --container-color: hsl(var(--hue), 2%, 10%);
   --conic-gradient: conic-gradient(
-    150deg AT 50% 45%,
+    from 150deg at 50% 45%,
     hsl(var(--hue), 80%, 20%) 0deg,
     hsl(var(--hue), 80%, 48%) 140deg,
     hsl(var(--hue), 80%, 20%) 360deg
   );
 
-  /*===== Font & Typography =====*/
+  /*=============== Font & Typography =====*/
   --body-font: "Montserrat Alternates", sans-serif;
   --second-font: "Grechen Fuemen", cursive;
   --biggest-font-size: 2.5rem;
@@ -29,17 +29,17 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /*===== Font weight =====*/
+  /*=============== Font weight ===============*/
   --font-regular: 400;
   --font-medium: 500;
   --font-semibold: 600;
 
-  /*===== z index =====*/
+  /*=============== z index ===============*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/*===== Responsive Typography =====*/
+/*=============== Responsive Typography ===============*/
 @media screen and (min-width: 1168px) {
   :root {
     --biggest-font-size: 3.5rem;
@@ -52,7 +52,7 @@
   }
 }
 
-/*===== Global Styles =====*/
+/*=============== Global Styles ===============*/
 * {
   margin: 0;
   padding: 0;
@@ -105,7 +105,7 @@ img {
   height: auto;
 }
 
-/*===== Reusable CSS Classes =====*/
+/*=============== Reusable CSS Classes =====*/
 .container {
   max-width: 1168;
   margin-inline: 1.5rem;
@@ -130,7 +130,7 @@ img {
   overflow: hidden;
 }
 
-/*===== Nav =====*/
+/*=============== Nav ===============*/
 .nav {
   position: fixed;
   bottom: 1.5rem;
@@ -163,15 +163,183 @@ img {
   place-items: center;
   transition: background-color 0.6s;
 }
-/* Active Link */
+/*======== Active Link ========*/
 
-/*===== Home =====*/
-/* Profile */
+/*=============== Home ===============*/
+/*======== Profile ========*/
+.profile {
+  position: relative;
+  background: var(--conic-gradient);
+  height: 415px;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: grid;
+  overflow: hidden;
+}
 
-/* Info */
+.profile_img {
+  width: 350px;
+  position: absolute;
+  justify-self: center;
+  align-self: flex-end;
+}
 
-/* About */
+.profile_data {
+  align-self: flex-end;
+  background-color: hsla(0, 0%, 1%, 0.1);
+  backdrop-filter: blur(16px);
+  --webkit-backdrop-filter: blur(16px);
+  padding: 1.5rem 1rem;
+  border-radius: 1.5rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
 
-/* Skills */
+.profile_name {
+  font: var(--font-regular) var(--biggest-font-size) var(--second-font);
+  margin-bottom: 1rem;
+}
 
-/*===== Button =====*/
+.profile_button {
+  display: grid;
+  column-gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.profile_button .button {
+  padding: 0.75rem 0;
+}
+
+/*======== Info ========*/
+.info,
+.about {
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.info_circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.info_name {
+  font: var(--font-regular) var(--h1-font-size) var(--second-font);
+}
+
+.info_data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.info_image {
+  background: var(--conic-gradient);
+  height: 180px;
+  border-radius: 2rem;
+  display: grid;
+  margin-block: 1.5rem;
+  overflow: hidden;
+}
+
+/* .info_img { 
+  width: 280px; 
+  justify-self: center;
+  align-self: flex-end; 
+/* } */
+
+.info_description {
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.info .button {
+  width: 100%;
+}
+/*======== About ========*/
+.about_name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-regular);
+  margin-bottom: 1rem;
+}
+
+.about_social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  margin-block: 2rem;
+}
+
+.about_link {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.about_link:hover {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+.about_image {
+  background: var(--conic-gradient);
+  height: 180px;
+  border-radius: 2rem;
+  display: grid;
+  overflow: hidden;
+}
+
+/* .about_img { 
+  width: 250px;
+  justify-self: center; 
+  transform: translateY(0.5rem); 
+/* } */
+
+.about_note {
+  font-size: var(--small-font-size);
+  margin-block: 1rem 2rem;
+}
+
+.about .button {
+  width: 100%;
+}
+
+/*======== Skills ========/
+
+/*=============== Button ===============*/
+.button {
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
+  padding: 1.25rem 2.5rem;
+  border-radius: 4rem;
+  transition: background-color 0.4s;
+}
+
+.button_black {
+  background-color: var(--black-color);
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/*=============== Projects ===============*/
+
+/*=============== Services ===============*/
+
+/*=============== Experience ===============*/
+
+/*=============== Contact ===============*/
+
+/*=============== Footer ===============*/
