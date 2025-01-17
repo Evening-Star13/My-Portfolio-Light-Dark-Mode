@@ -368,7 +368,24 @@
 
     <!--=============== Contact ===============-->
     <section class="contact section" id="contact">
+      <h2 class="section_title">Contact Me</h2>
 
+      <div class="contact_container container grid">
+        <form action="" class="contact_form grid" id="contact-form">
+          <div class="contact_group grid">
+            <input type="text" name="user_name" placeholder="Name" class="contact_input" required>
+            <input type="email" name="user_email" placeholder="Email" class="contact_input" required>
+          </div>
+
+          <textarea name="user_message" placeholder="Message" class="contact_input contact_area"></textarea>
+
+          <button type="submit" class="button contact_button">Send Message</button>
+
+          <p class="contact_message" id="contact-message">
+
+          </p>
+        </form>
+      </div>
     </section>
   </main>
   <!--=============== Footer ===============-->

@@ -475,8 +475,82 @@ img {
 }
 
 /*=============== Experience ===============*/
+.experience_container {
+  row-gap: 2rem;
+}
+
+.experience_card {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.experience_company {
+  font-size: var(--h2-font-size);
+}
+
+.experience_data {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.experience_profession {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.experience_date {
+  display: block;
+  font-size: var(--smaller-font-size);
+  margin-bottom: 1rem;
+}
+
+.experience_description {
+  color: var(--text-color);
+}
 
 /*=============== Contact ===============*/
+.contact_group,
+.contact_form {
+  gap: 1rem;
+}
+
+.contact_form {
+  position: relative;
+}
+
+.contact_input {
+  background-color: var(--container-color);
+  padding: 1.25rem;
+  border-radius: 4rem;
+  color: var(--white-color);
+}
+
+.contact_input::placeholder {
+  color: var(--text-color);
+}
+
+.contact_input:autofill {
+  transition: background-color 6000s, color 6000s;
+}
+
+.contact_area {
+  height: 10rem;
+  border-radius: 1.5rem;
+  resize: none;
+}
+
+.contact_button {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.contact_message {
+  position: absolute;
+  left: 0;
+  bottom: 4.5rem;
+  font-size: var(--smaller-font-size);
+}
 
 /*=============== Footer ===============*/
 
