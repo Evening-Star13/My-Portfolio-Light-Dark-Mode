@@ -120,7 +120,7 @@ img {
   padding-block: 2rem 3rem;
 }
 
-.section__title {
+.section_title {
   font-size: var(--h2-font-size);
   text-align: center;
   margin-bottom: 2rem;
@@ -211,7 +211,8 @@ img {
 
 /*======== Info ========*/
 .info,
-.about {
+.about,
+.skills {
   background-color: var(--container-color);
   padding: 2rem 1.5rem;
   border-radius: 2rem;
@@ -312,7 +313,31 @@ img {
   width: 100%;
 }
 
-/*======== Skills ========/
+/*======== Skills ========*/
+.skills_title {
+  font-size: var(--h2-font-size);
+}
+
+.skills_item {
+  width: 1.5rem;
+  transition: transform 0.4s;
+}
+
+.skills_item:hover {
+  transform: translateY(-0.25rem);
+}
+
+.skills_items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 1.5rem;
+}
+
+.skills_description {
+  font-size: var(--small-font-size);
+}
 
 /*=============== Button ===============*/
 .button {
@@ -335,11 +360,126 @@ img {
 }
 
 /*=============== Projects ===============*/
+.projects_card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
+.project_image {
+  display: block;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.projects_img {
+  transition: transform 0.4s;
+}
+
+.projects_name {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.projects_description {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.projects_skill {
+  width: 1rem;
+  transition: transform 0.4s;
+}
+
+.projects_skill:hover {
+  transform: translateY(-0.25rem);
+}
+
+.projects_skills {
+  width: max-content;
+  height: 34px;
+  background-color: var(--black-color);
+  padding-inline: 0.75rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-radius: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.projects_button {
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  transition: color 0.4s;
+}
+
+.projects_button i {
+  font-size: 1.25rem;
+}
+
+.projects_button span {
+  font-weight: var(--font-medium);
+}
+
+.projects_button:hover {
+  color: var(--text-color);
+}
+
+.projects_card:hover .projects_img {
+  transform: scale(1.2);
+}
 
 /*=============== Services ===============*/
+.services_card {
+  background-color: var(--container-color);
+  padding: 4rem 1.5rem 3.5rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.services_icon {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.services_icon i {
+  font-size: 2.5rem;
+  position: relative;
+  z-index: var(--z-tooltip);
+}
+
+.services_circle {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  transition: transform 0.4s;
+}
+
+.services_name {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.services_description {
+  color: var(--text-color);
+}
+
+.services_card:hover .services_circle {
+  transform: translate(0.25rem, -0.25rem);
+}
 
 /*=============== Experience ===============*/
 
 /*=============== Contact ===============*/
 
 /*=============== Footer ===============*/
+
+/*=============== Scroll Bar ===============*/
+
+/*=============== Scroll Up ===============*/
