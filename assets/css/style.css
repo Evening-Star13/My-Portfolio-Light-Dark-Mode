@@ -553,6 +553,65 @@ img {
 }
 
 /*=============== Footer ===============*/
+.footer {
+  padding-block: 2rem 8rem;
+}
+
+.footer_container {
+  row-gap: 2.5rem;
+}
+
+.footer_logo {
+  color: var(--white-color);
+  font: var(--font-regular) var(--biggest-font-size) var(--second-font);
+  justify-self: center;
+}
+
+.footer_links {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.footer_link {
+  color: var(--white-color);
+  transition: color 0.4s;
+}
+
+.footer_link:hover {
+  color: var(--text-color);
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.footer_social-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.footer_social-link:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.footer_copy {
+  display: block;
+  margin-top: 4.5rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
 
 /*=============== Scroll Bar ===============*/
 
