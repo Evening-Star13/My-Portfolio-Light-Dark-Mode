@@ -664,8 +664,36 @@ img {
   .container {
     margin-inline: 1rem;
   }
+
+  .nav {
+    padding: 1rem;
+  }
 }
 
 /*======== For Medium Devices ========*/
+@media screen and (min-width: 540px) {
+  .nav {
+    width: max-content;
+  }
+  .nav__list {
+    column-gap: 1.25rem;
+  }
+
+  .home__container,
+  .projects_container,
+  .services_container,
+  .experience_container,
+  .contact_container {
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home__container {
+    grid-template-columns: repeat(2, 350px);
+    align-items: flex-start;
+  }
+}
 
 /*======== For Large Devices ========*/
