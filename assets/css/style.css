@@ -730,3 +730,111 @@ img {
 }
 
 /*======== For Large Devices ========*/
+@media screen and (min-width: 1200px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 3rem 4rem;
+  }
+  .section_title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 4rem;
+  }
+
+  .home__container {
+    grid-template-columns: 280px 560px 280px;
+    align-items: stretch;
+  }
+
+  .profile {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding: 2rem;
+  }
+  .profile_img {
+    width: 650px;
+    height: 100vh;
+  }
+  .profile_data {
+    width: 370px;
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  .info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .info_name {
+    font-size: var(--h2-font-size);
+  }
+  .info_image {
+    height: 180px;
+  }
+  .info_img {
+    height: 190px;
+    transform: translateY(-.05);
+  }
+
+  .about {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    align-content: center;
+  }
+  .about_image {
+    height: 180px;
+  }
+  .about_img {
+    height: 190px;
+    transform: translateY(-.05rem);
+  }
+
+  .skills {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .skills_title {
+    font-size: var(--h3-font-size);
+  }
+
+  .projects_container {
+    grid-template-columns: repeat(3, 368px);
+    gap: 2rem;
+  }
+  .projects_card {
+    padding-bottom: 2rem;
+  }
+
+  .services_container {
+    grid-template-columns: repeat(3, 368px);
+    gap: 2rem;
+  }
+  .services_card {
+    padding-block: 6rem 5rem;
+  }
+  .services_icon i {
+    font-size: 3.5rem;
+  }
+  .services_circle {
+    width: 4rem;
+    height: 4rem;
+    right: -1.5rem;
+    top: -1.56rem;
+  }
+
+  .experience_container {
+    row-gap: 4rem;
+}
+.experience_card {
+  grid-template-columns: 350px 510px;
+  column-gap: 8rem;
+}
+.experience_company {
+  font-size: var(--h1-font-size);
+}
+.experience_data {
+  padding: 2rem;
+  border-radius: 2rem;
+}
