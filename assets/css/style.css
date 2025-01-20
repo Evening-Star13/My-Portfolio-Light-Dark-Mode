@@ -3,7 +3,19 @@
 /*=============== Variables CSS ===============*/
 :root {
   /*=============== Colors ===============*/
-  --hue: 358;
+  /*
+        Change Favorite Color:
+
+        Default (Red): hsl(358, 80%, 49%)
+        Purple: hsl(262, 96%, 45%) - Blue:: hsl(220, 80%, 49%)
+        Green: hsl(100, 80%, 49%) - Orange: hsl(24, 96%, 45%)
+        Yellow: hsl(65, 80%, 49%)
+
+        For More Colors visit: https://htmlcolorcodes.com/
+        -> Choose Any Color
+        -> Copy the Color Mode (HSL)
+  */
+  --hue: 24;
   --first-color: hsl(var(--hue), 80%, 49%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
   --white-color: hsl(0, 0%, 98%);
