@@ -694,6 +694,39 @@ img {
     grid-template-columns: repeat(2, 350px);
     align-items: flex-start;
   }
+
+  .profile {
+    height: 100%;
+  }
+
+  .projects_container,
+  .services_container {
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  .experience_container {
+    grid-template-columns: initial;
+  }
+  .experience_card {
+    grid-template-columns: 320px 380px;
+    align-items: center;
+  }
+
+  .footer_container,
+  .footer_content {
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+  }
+  .footer_container {
+    justify-content: space-between;
+  }
+  .footer_content {
+    column-gap: 4.5rem;
+  }
+
+  .show-scroll {
+    bottom: 3rem;
+  }
 }
 
 /*======== For Large Devices ========*/
