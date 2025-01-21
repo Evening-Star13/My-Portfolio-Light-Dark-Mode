@@ -874,6 +874,9 @@ img {
   .footer_copy {
     margin-top: 7rem;
   }
+  .footer_content {
+    margin-left: 1.5rem;
+  }
   .footer_social {
     margin-right: 1.5rem;
   }
