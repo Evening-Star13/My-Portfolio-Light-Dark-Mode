@@ -15,7 +15,7 @@
         -> Choose Any Color
         -> Copy the Color Mode (HSL)
   */
-  --hue: 358;
+  --hue: 262;
   --first-color: hsl(var(--hue), 80%, 49%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
   --white-color: hsl(0, 0%, 98%);
@@ -313,11 +313,11 @@ img {
   overflow: hidden;
 }
 
-/* .about_img { 
-  width: 250px;
+.about_img { 
+  width: 200px;
   justify-self: center; 
   transform: translateY(0.5rem); 
-/* } */
+ }
 
 .about_note {
   font-size: var(--small-font-size);
