@@ -305,20 +305,28 @@ img {
   color: var(--white-color);
 }
 
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensure vertical stacking */
+}
+
 .about_image {
   background: var(--conic-gradient);
   height: 180px;
   border-radius: 2rem;
-  display: grid;
+  display: flex; /* Change to flex for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   overflow: hidden;
 }
 
 .about_img { 
-  width: 210px;
-  justify-self: center; 
-  transform: translateY(0.5rem);
-  padding: 05px 0 20px 0;
- }
+  width: 200px;
+  height: auto; /* Maintain aspect ratio */
+  transform: translateY(0.5rem); 
+}
 
 .about_note {
   font-size: var(--small-font-size);
