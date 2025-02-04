@@ -314,9 +314,10 @@ img {
 }
 
 .about_img { 
-  width: 200px;
+  width: 210px;
   justify-self: center; 
-  transform: translateY(0.5rem); 
+  transform: translateY(0.5rem);
+  padding: 05px 0 20px 0;
  }
 
 .about_note {
