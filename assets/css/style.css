@@ -681,13 +681,17 @@ img {
 
 /*=============== Breakpoints ===============*/
 /*======== For Small Devices ========*/
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   .container {
     margin-inline: 1rem;
   }
 
   .nav {
     padding: 1rem;
+  }
+
+  .about_img {
+    padding: 0 0 20px 0;
   }
 }
 
@@ -708,6 +712,10 @@ img {
     grid-template-columns: 380px;
     justify-content: center;
   }
+
+  .about_img {
+    padding: 5px 0 20px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -718,6 +726,10 @@ img {
 
   .profile {
     height: 100%;
+  }
+
+  .about_img {
+    padding: 5px 0 20px 0;
   }
 
   .projects_container,
@@ -754,6 +766,10 @@ img {
 @media screen and (min-width: 1200px) {
   .container {
     margin-inline: auto;
+  }
+
+  .about_img {
+    padding: 0 0 0 0;
   }
 
   .section {
