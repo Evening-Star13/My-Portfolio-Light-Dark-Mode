@@ -353,7 +353,8 @@ img {
 /*======== About ========*/
 .about_image {
   background: var(--conic-gradient);
-  height: 180px; /* Match the height of .info_image */
+  width: auto;
+  height: 250px; /* Match the height of .info_image */
   border-radius: 2rem;
   display: grid; /* Change to grid for consistency */
   margin-block: 1.5rem; /* Match margin with .info_image */
@@ -361,7 +362,7 @@ img {
 }
 
 .about_img {
-  width: 380px; /* Match the width of .info_img */
+  width: auto; /* Match the width of .info_img */
   height: auto; /* Maintain aspect ratio */
   justify-self: center; /* Center the image */
   align-self: flex-end; /* Align the image to the bottom */
