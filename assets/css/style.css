@@ -153,15 +153,12 @@ img {
   z-index: var(--z-fixed); /* Ensure it stays on top */
 }
 
-
-  .logo_img {
-    max-width: 200px; /* Maximum width */
-    max-height: 200px; /* Maximum height */
-    width: 100%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-
+.logo_img {
+  max-width: 200px; /* Maximum width */
+  max-height: 200px; /* Maximum height */
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+}
 
 /*=============== Nav ===============*/
 .nav {
@@ -363,14 +360,13 @@ img {
   overflow: hidden;
 }
 
-.about_img { 
+.about_img {
   width: 380px; /* Match the width of .info_img */
   height: auto; /* Maintain aspect ratio */
   justify-self: center; /* Center the image */
   align-self: flex-end; /* Align the image to the bottom */
-  transform: translateY(-.75rem); /* Maintain the same transform */
+  transform: translateY(-0.75rem); /* Maintain the same transform */
 }
-
 
 .about_note {
   font-size: var(--small-font-size);
@@ -951,7 +947,6 @@ img {
   }
 }
 
-
 @media screen and (min-width: 1500px) {
   .nav {
     width: max-content;
@@ -977,12 +972,6 @@ img {
   }
 }
 
-
-
-
-
-
-
 .settings {
   position: fixed;
   top: 1rem;
@@ -995,14 +984,13 @@ img {
   display: none; /* or display: hidden; */
 }
 
-
 .settings-panel .button {
   display: inline-flex;
   justify-content: center;
   background-color: var(--first-color);
   color: var(--white-color);
   font-weight: var(--font-semibold);
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 4rem;
   transition: background-color 0.4s;
 }
@@ -1062,4 +1050,3 @@ img {
 .color-circle:hover {
   transform: scale(1.1);
 }
-
