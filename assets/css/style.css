@@ -9,7 +9,7 @@
         Default (Red): hsl(358, 80%, 49%)
         Purple: hsl(262, 96%, 45%) - Blue:: hsl(220, 80%, 49%)
         Green: hsl(100, 80%, 49%) - Orange: hsl(24, 96%, 45%)
-        Yellow: hsl(65, 80%, 49%)
+        Yellow: hsl(290, 94%, 49%)
 
         For More Colors visit: https://htmlcolorcodes.com/
         -> Choose Any Color
@@ -141,6 +141,27 @@ img {
 .main {
   overflow: hidden;
 }
+/*=============== Logo ===============*/
+.logo_container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative; /* Position relative for absolute positioning of the logo */
+  top: 20px; /* Align to the top */
+  width: 100%; /* Full width */
+  padding: 0; /* Optional padding */
+  z-index: var(--z-fixed); /* Ensure it stays on top */
+}
+
+
+  .logo_img {
+    max-width: 200px; /* Maximum width */
+    max-height: 200px; /* Maximum height */
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+
 
 /*=============== Nav ===============*/
 .nav {
@@ -181,6 +202,10 @@ img {
 }
 
 /*=============== Home ===============*/
+.home {
+  position: relative;
+  top: 50px;
+}
 /*======== Profile ========*/
 .profile {
   position: relative;
@@ -312,21 +337,40 @@ img {
   flex-direction: column; /* Ensure vertical stacking */
 }
 
-.about_image {
+/* .about_image {
   background: var(--conic-gradient);
   height: 180px;
   border-radius: 2rem;
-  display: flex; /* Change to flex for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   overflow: hidden;
 }
 
 .about_img { 
   width: 200px;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   transform: translateY(0.5rem); 
+} */
+
+/*======== About ========*/
+.about_image {
+  background: var(--conic-gradient);
+  height: 180px; /* Match the height of .info_image */
+  border-radius: 2rem;
+  display: grid; /* Change to grid for consistency */
+  margin-block: 1.5rem; /* Match margin with .info_image */
+  overflow: hidden;
 }
+
+.about_img { 
+  width: 380px; /* Match the width of .info_img */
+  height: auto; /* Maintain aspect ratio */
+  justify-self: center; /* Center the image */
+  align-self: flex-end; /* Align the image to the bottom */
+  transform: translateY(-.75rem); /* Maintain the same transform */
+}
+
 
 .about_note {
   font-size: var(--small-font-size);
@@ -824,7 +868,7 @@ img {
     height: 180px;
   }
   .about_img {
-    height: 190px;
+    height: 180px;
     transform: translateY(-0.05rem);
   }
 
@@ -907,6 +951,7 @@ img {
   }
 }
 
+
 @media screen and (min-width: 1500px) {
   .nav {
     width: max-content;
@@ -931,3 +976,90 @@ img {
     right: 4rem;
   }
 }
+
+
+
+
+
+
+
+.settings {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: var(--z-fixed);
+}
+
+#settings-panel {
+  display: none; /* or display: hidden; */
+}
+
+
+.settings-panel .button {
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
+  padding: .5rem 1.5rem;
+  border-radius: 4rem;
+  transition: background-color 0.4s;
+}
+
+.settings {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: var(--z-fixed);
+}
+
+.settings-panel {
+  display: none; /* Initially hidden */
+  position: fixed;
+  background-color: var(--container-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: var(--z-fixed);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Ensure flex display */
+  gap: 0.5rem;
+}
+
+/* Default layout for larger screens */
+@media screen and (min-width: 768px) {
+  .settings-panel {
+    top: 1rem;
+    right: 3rem;
+    flex-direction: row; /* Horizontal layout */
+  }
+}
+
+/* Layout for smaller screens */
+@media screen and (max-width: 767px) {
+  .settings-panel {
+    top: 3rem;
+    right: 1rem;
+    flex-direction: column; /* Vertical layout */
+  }
+}
+
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
